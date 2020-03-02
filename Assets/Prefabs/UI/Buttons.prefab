@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 4229333421452615739}
   - component: {fileID: 5827037045857749140}
   - component: {fileID: 5548971863156692513}
+  - component: {fileID: 1625446348945006146}
   m_Layer: 5
   m_Name: Feed Button
   m_TagString: Untagged
@@ -154,6 +155,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1625446348945006146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185396582086498491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e096245b2e5dd4fb6e53efcc6b8021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  need: {fileID: 0}
 --- !u!1 &6482038165959063455
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +180,7 @@ GameObject:
   - component: {fileID: 5198711147076379114}
   - component: {fileID: 1392939970958485298}
   - component: {fileID: 7416438173850304703}
+  - component: {fileID: 9141976149517426597}
   m_Layer: 5
   m_Name: Fun Button
   m_TagString: Untagged
@@ -271,3 +286,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9141976149517426597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482038165959063455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e096245b2e5dd4fb6e53efcc6b8021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  need: {fileID: 0}
