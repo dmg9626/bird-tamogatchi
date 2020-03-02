@@ -32,9 +32,9 @@ public class Need : MonoBehaviour
 
     [SerializeField]
     /// <summary>
-    /// How often this need will decrease
+    /// Hold min/max time to wait before decreasing this stat
     /// </summary>
-    protected float decreaseFrequency = 15;
+    protected Vector2 decreaseFrequency = new Vector2(5, 10);
 
     [SerializeField]
     /// <summary>
@@ -63,7 +63,6 @@ public class Need : MonoBehaviour
     /// </summary>
     private void CalculateSatisfaction()
     {
-
         if (level <= .3f)
             satisfactionLevel = SatisfactionLevel.LOW;
         else if (level <= .6f)
@@ -76,10 +75,12 @@ public class Need : MonoBehaviour
 
     private IEnumerator DecreaseOverTime()
     {
-        while(true)
-        {
+        while(true) {
+            // Generate delay between min/max ends of decreaseFrequency
+            float delay = Random.Range(decreaseFrequency.x, decreaseFrequency.y);
+            
             // Wait delay, then decrease stat
-            yield return new WaitForSeconds(decreaseFrequency);
+            yield return new WaitForSeconds(delay);
             Decrease(decreaseAmount);
         }
     }
