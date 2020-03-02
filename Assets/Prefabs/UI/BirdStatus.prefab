@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 3797314416173632928}
   - component: {fileID: 3797314416173632930}
   - component: {fileID: 6603750642410840092}
+  - component: {fileID: 1336064282244306648}
   m_Layer: 5
   m_Name: Love Container
   m_TagString: Untagged
@@ -303,6 +304,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1336064282244306648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797314416173632927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc58620f39c6ac44b4b4b8145948051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2270346382726301927}
+  unhappySprite: {fileID: 0}
+  neutralSprite: {fileID: 0}
+  happySprite: {fileID: 0}
+  maxHappySprite: {fileID: 0}
 --- !u!1 &4845431781754592557
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +487,7 @@ GameObject:
   - component: {fileID: 4845431781887362028}
   - component: {fileID: 4845431781887362026}
   - component: {fileID: 4845431781887362029}
+  - component: {fileID: 4958107420053614036}
   m_Layer: 5
   m_Name: Fun Stat
   m_TagString: Untagged
@@ -533,6 +552,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4958107420053614036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845431781887362031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc58620f39c6ac44b4b4b8145948051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4845431782611923714}
+  unhappySprite: {fileID: 0}
+  neutralSprite: {fileID: 0}
+  happySprite: {fileID: 0}
+  maxHappySprite: {fileID: 0}
 --- !u!1 &4845431782420822052
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +827,7 @@ GameObject:
   - component: {fileID: 4845431782849547571}
   - component: {fileID: 4845431782849547569}
   - component: {fileID: 4845431782849547568}
+  - component: {fileID: 2174335944775861662}
   m_Layer: 5
   m_Name: Hunger Stat
   m_TagString: Untagged
@@ -855,6 +892,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2174335944775861662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4845431782849547570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc58620f39c6ac44b4b4b8145948051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4845431782420822050}
+  unhappySprite: {fileID: 0}
+  neutralSprite: {fileID: 0}
+  happySprite: {fileID: 0}
+  maxHappySprite: {fileID: 0}
 --- !u!1 &4845431783431054095
 GameObject:
   m_ObjectHideFlags: 0

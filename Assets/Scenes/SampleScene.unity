@@ -251,8 +251,8 @@ MonoBehaviour:
   satisfactionLevel: 0
   viewElement: {fileID: 8614449163210100551}
   decreaseOverTime: 0
-  decreaseFrequency: 15
-  decreaseAmount: 0.2
+  decreaseFrequency: 0
+  decreaseAmount: 0
   hunger: {fileID: 651749460}
   fun: {fileID: 956971185}
 --- !u!1 &651749458
@@ -720,7 +720,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ac7b2418a81a7974fb9d5a4457cc8380, type: 3}
 --- !u!114 &8614449163210100551 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1336064282244306648, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+  m_CorrespondingSourceObject: {fileID: 2754059153833573336, guid: ac7b2418a81a7974fb9d5a4457cc8380,
     type: 3}
   m_PrefabInstance: {fileID: 8614449163210100550}
   m_PrefabAsset: {fileID: 0}
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &8614449163210100552 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4958107420053614036, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+  m_CorrespondingSourceObject: {fileID: 8105486720791593172, guid: ac7b2418a81a7974fb9d5a4457cc8380,
     type: 3}
   m_PrefabInstance: {fileID: 8614449163210100550}
   m_PrefabAsset: {fileID: 0}
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &8614449163210100553 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2174335944775861662, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+  m_CorrespondingSourceObject: {fileID: 3070907742141114526, guid: ac7b2418a81a7974fb9d5a4457cc8380,
     type: 3}
   m_PrefabInstance: {fileID: 8614449163210100550}
   m_PrefabAsset: {fileID: 0}

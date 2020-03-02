@@ -22,6 +22,6 @@ public class Love : Need
         level = (fun.level + hunger.level) / 2f;
 
         // Update sprite accordingly
-        viewElement.UpdateSprite(satisfactionLevel);
+        base.Update();
     }
 }

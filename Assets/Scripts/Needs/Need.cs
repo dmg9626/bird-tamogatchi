@@ -53,6 +53,17 @@ public class Need : MonoBehaviour
 
     protected virtual void Update()
     {
+        // Update sprite according to level of satisfaction
+        CalculateSatisfaction();
+        viewElement.UpdateSprite(satisfactionLevel);
+    }
+
+    /// <summary>
+    /// Updates SatisfactionLevel according to value of level
+    /// </summary>
+    private void CalculateSatisfaction()
+    {
+
         if (level <= .3f)
             satisfactionLevel = SatisfactionLevel.LOW;
         else if (level <= .6f)
@@ -61,9 +72,6 @@ public class Need : MonoBehaviour
             satisfactionLevel = SatisfactionLevel.HIGH;
         else
             satisfactionLevel = SatisfactionLevel.MAX;
-
-        // Update sprite accordingly
-        viewElement.UpdateSprite(satisfactionLevel);
     }
 
     private IEnumerator DecreaseOverTime()
