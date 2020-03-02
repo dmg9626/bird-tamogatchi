@@ -18,6 +18,10 @@ public class Love : Need
     // Update is called once per frame
     protected override void Update()
     {
+        // Calculate love level (avg. of other 2 stats)
         level = (fun.level + hunger.level) / 2f;
+
+        // Update sprite accordingly
+        viewElement.UpdateSprite(satisfactionLevel);
     }
 }

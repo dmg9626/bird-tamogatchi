@@ -25,6 +25,9 @@ public class Need : MonoBehaviour
     public SatisfactionLevel satisfactionLevel;
 
     [SerializeField]
+    protected NeedViewElement viewElement;
+
+    [SerializeField]
     protected bool decreaseOverTime = true;
 
     [SerializeField]
@@ -43,6 +46,9 @@ public class Need : MonoBehaviour
     {
         if (decreaseOverTime)
             StartCoroutine(DecreaseOverTime());
+
+        if(!viewElement)
+            Debug.LogError(name + " | missing reference to NeedViewElement");
     }
 
     protected virtual void Update()
@@ -55,6 +61,9 @@ public class Need : MonoBehaviour
             satisfactionLevel = SatisfactionLevel.HIGH;
         else
             satisfactionLevel = SatisfactionLevel.MAX;
+
+        // Update sprite accordingly
+        viewElement.UpdateSprite(satisfactionLevel);
     }
 
     private IEnumerator DecreaseOverTime()
