@@ -49,13 +49,15 @@ public class Need : MonoBehaviour
 
         if(!viewElement)
             Debug.LogError(name + " | missing reference to NeedViewElement");
+
+
     }
 
     protected virtual void Update()
     {
         // Update sprite according to level of satisfaction
         CalculateSatisfaction();
-        viewElement.UpdateSprite(satisfactionLevel);
+        viewElement.UpdateSatisfaction(satisfactionLevel);
     }
 
     /// <summary>
