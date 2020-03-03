@@ -260,7 +260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0.3
-  satisfactionLevel: 0
   viewElement: {fileID: 73555977}
   decreaseOverTime: 0
   decreaseFrequency: {x: 5, y: 10}
@@ -311,7 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0.3
-  satisfactionLevel: 0
   viewElement: {fileID: 8614449163210100553}
   decreaseOverTime: 1
   decreaseFrequency: {x: 5, y: 10}
@@ -360,7 +358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0.3
-  satisfactionLevel: 0
   viewElement: {fileID: 8614449163210100552}
   decreaseOverTime: 1
   decreaseFrequency: {x: 5, y: 10}
@@ -424,6 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461792037}
   - component: {fileID: 1461792036}
+  - component: {fileID: 1461792035}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -431,6 +429,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1461792035
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461792034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b2c5082afe0d0f46bc1e6487e4cd2b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1461792036
 SpriteRenderer:
   m_ObjectHideFlags: 0
