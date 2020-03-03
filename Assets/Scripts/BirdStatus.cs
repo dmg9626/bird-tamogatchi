@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdStatus : MonoBehaviour
+public class BirdStatus : Singleton<BirdStatus>
 {
     public Need hunger;
 
