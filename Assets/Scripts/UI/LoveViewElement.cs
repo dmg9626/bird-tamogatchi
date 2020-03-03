@@ -28,8 +28,6 @@ public class LoveViewElement : NeedViewElement
     /// </summary>
     private Dictionary<SatisfactionLevel, Sprite> satisfactionSpriteDict;
 
-    private SatisfactionLevel satisfactionLevel;
-
     // Use this for initialization
     void Start()
     {
@@ -50,8 +48,6 @@ public class LoveViewElement : NeedViewElement
             Debug.LogErrorFormat(name + " | failed to pull {0} sprite from dictionary", satisfactionLevel);
             return;
         }
-        if (satisfactionLevel == this.satisfactionLevel)
-            return;
 
         // Set sprite accordingly
         image.sprite = sprite;

@@ -22,7 +22,7 @@ public class Need : MonoBehaviour
     /// </summary>
     public enum Type { HUNGER, FUN, LOVE };
 
-    public SatisfactionLevel satisfactionLevel;
+    public SatisfactionLevel satisfactionLevel => CalculateSatisfaction();
 
     [SerializeField]
     protected NeedViewElement viewElement;
@@ -49,30 +49,27 @@ public class Need : MonoBehaviour
 
         if(!viewElement)
             Debug.LogError(name + " | missing reference to NeedViewElement");
-
-
     }
 
     protected virtual void Update()
     {
         // Update sprite according to level of satisfaction
-        CalculateSatisfaction();
         viewElement.UpdateSatisfaction(satisfactionLevel);
     }
 
     /// <summary>
     /// Updates SatisfactionLevel according to value of level
     /// </summary>
-    private void CalculateSatisfaction()
+    protected virtual SatisfactionLevel CalculateSatisfaction()
     {
         if (level <= .3f)
-            satisfactionLevel = SatisfactionLevel.LOW;
+            return SatisfactionLevel.LOW;
         else if (level <= .6f)
-            satisfactionLevel = SatisfactionLevel.MEDIUM;
+            return SatisfactionLevel.MEDIUM;
         else if (level <= .9f)
-            satisfactionLevel = SatisfactionLevel.HIGH;
+            return SatisfactionLevel.HIGH;
         else
-            satisfactionLevel = SatisfactionLevel.MAX;
+            return SatisfactionLevel.MAX;
     }
 
     private IEnumerator DecreaseOverTime()
