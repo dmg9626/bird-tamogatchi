@@ -70,5 +70,24 @@ public class NeedViewElement : MonoBehaviour
 
         // Update image
         image.sprite = sprite;
+        Color color;
+        switch(satisfactionLevel) {
+            case SatisfactionLevel.MAX:
+                color = Color.white;
+                break;
+            case SatisfactionLevel.HIGH:
+                color = Color.cyan;
+                break;
+            case SatisfactionLevel.MEDIUM:
+                color = Color.blue;
+                break;
+            case SatisfactionLevel.LOW:
+                color = Color.grey;
+                break;
+            default:
+                color = Color.black;
+                break;
+        }
+        image.color = color;
     }
 }
