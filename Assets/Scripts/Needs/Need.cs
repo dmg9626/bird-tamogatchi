@@ -86,7 +86,7 @@ public class Need : MonoBehaviour
 
     public void Increase(float amount)
     {
-        Debug.Log(name + " | changing from " + level + " to " + Mathf.Clamp(level + amount, 0, 1));
+        //Debug.Log(name + " | changing from " + level + " to " + Mathf.Clamp(level + amount, 0, 1));
         level = Mathf.Clamp(level + amount, 0, 1);
     }
 
