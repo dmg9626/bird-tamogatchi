@@ -11,7 +11,7 @@ public class WobbleRotation : MonoBehaviour
     /// Speed of wobble animation
     /// </summary>
     [SerializeField]
-    private float wobbleSpeed = .5f;
+    private float wobbleDuration = 1f;
 
     /// <summary>
     /// How far the egg wobbles left/right (in degrees)
@@ -34,19 +34,18 @@ public class WobbleRotation : MonoBehaviour
     [SerializeField]
     private Vector2 wobbleDelayRange;
 
-    // Update is called once per frame
     void Update()
     {
-        if(wobbleCoroutine == null)
+        if (wobbleCoroutine == null)
         {
             // Wobble a random number of times
-            int numWobbles = Random.Range(minWobbles, maxWobbles+1);
-            wobbleCoroutine = StartCoroutine(Wobble(numWobbles));
+            int numWobbles = Random.Range(minWobbles, maxWobbles + 1);
+            wobbleCoroutine = StartCoroutine(WobbleCoroutine(numWobbles));
         }
     }
 
     private Coroutine wobbleCoroutine;
-    private IEnumerator Wobble(int numberOfWobbles)
+    private IEnumerator WobbleCoroutine(int numberOfWobbles)
     {
         float t = 0;
         while(t < numberOfWobbles * 2) {
@@ -57,7 +56,7 @@ public class WobbleRotation : MonoBehaviour
             float angle = pingpong * wobbleAngle;
             transform.eulerAngles = new Vector3(0, 0, angle);
 
-            t += Time.deltaTime * wobbleSpeed;
+            t += Time.deltaTime * (1 / wobbleDuration);
             yield return null;
         }
         // Make sure we stop exactly at 0 degrees

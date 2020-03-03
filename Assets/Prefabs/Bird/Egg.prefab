@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2157784002514439159}
   - component: {fileID: 2157784002514439158}
   - component: {fileID: 1004647187011541978}
+  - component: {fileID: 1910870877}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -93,7 +94,7 @@ Animator:
   m_GameObject: {fileID: 2157784002514439156}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 364c076fc50907d4a8235d84beae3c35, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -114,8 +115,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c38c2b71012fc94cb239d9b867881cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wobbleSpeed: 1.5
+  wobbleDuration: 0.5
   wobbleAngle: 30
   minWobbles: 1
   maxWobbles: 2
-  wobbleDelayRange: {x: 1, y: 3}
+  wobbleDelayRange: {x: 0.5, y: 1.5}
+--- !u!114 &1910870877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157784002514439156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14df9a0e0d246c045a02074acfffcd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhase: {fileID: -5604854494012594904, guid: baebc34e327246a41a02e2cb578621c2,
+    type: 3}
+  hatchDelay: 1.5
