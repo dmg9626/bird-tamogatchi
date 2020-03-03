@@ -80,7 +80,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Bird_Steppy
+  m_Name: Adult_Steppy
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -106,7 +106,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bird
+  m_Name: AdultBird
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Chirp
@@ -141,7 +141,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Bird_Idle
+  m_Name: Adult_Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -195,10 +195,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3590088631948982363}
-    m_Position: {x: 560, y: -10, z: 0}
+    m_Position: {x: 350, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4437427185416585925}
-    m_Position: {x: 450, y: 270, z: 0}
+    m_Position: {x: 350, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 267057101853921892}
     m_Position: {x: 350, y: 110, z: 0}
@@ -245,7 +245,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Bird_Chirp
+  m_Name: Adult_Chirp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
