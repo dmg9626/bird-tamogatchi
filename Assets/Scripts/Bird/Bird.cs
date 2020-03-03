@@ -14,13 +14,19 @@ public abstract class Bird : MonoBehaviour
     [SerializeField]
     protected Bird nextPhase;
 
+    protected BirdStatus birdStatus;
+
     // Use this for initialization
     void Awake()
     {
+        // Check for components
         if (!TryGetComponent(out spriteRenderer))
             Debug.LogError(name + " | missing SpriteRenderer component");
         if (!TryGetComponent(out animator))
             Debug.LogError(name + " | missing Animator component");
+
+        // Set reference to bird status
+        birdStatus = BirdStatus.Instance;
     }
 
     public bool Evolve()
