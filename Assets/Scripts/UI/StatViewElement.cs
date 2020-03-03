@@ -68,7 +68,6 @@ public class StatViewElement : NeedViewElement
         // Destroy existing children
         for (int i = 0; i < transform.childCount; i++)
         {
-            Debug.Log("Destroying child " + i);
             Transform child = transform.GetChild(i);
             Destroy(child.gameObject);
         }
