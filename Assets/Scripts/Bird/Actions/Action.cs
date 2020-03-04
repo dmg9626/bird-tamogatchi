@@ -7,7 +7,9 @@ public abstract class Action : MonoBehaviour
     {
         HOP = 0,
         CHIRP = 1,
-        STEPPY = 2
+        STEPPY = 2,
+        ITCH = 3,
+        SING = 4
     }
     public Type type { get; protected set; }
 
