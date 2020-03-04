@@ -39,6 +39,18 @@ public abstract class Bird : MonoBehaviour
         birdStatus = BirdStatus.Instance;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        // Perform actions at random
+        if (!IsPerformingAction())
+        {
+            Debug.Log("Performing action...");
+            Action action = SelectRandomAction();
+            action.Execute();
+        }
+    }
+
     public bool Evolve()
     {
         // Return false if there's no phase to evolve to
@@ -53,6 +65,19 @@ public abstract class Bird : MonoBehaviour
         return true;
     }
 
+    
+    private Action SelectRandomAction()
+    {
+        if (actions.Length == 0)
+            return null;
+
+        int actionIndex = Random.Range(0, actions.Length);
+        return actions[actionIndex];
+    }
+
+    /// <summary>
+    /// Returns true if bird currently performing action, false otherwise
+    /// </summary>
     protected bool IsPerformingAction()
     {
         foreach(Action action in actions)
@@ -63,6 +88,9 @@ public abstract class Bird : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Returns action with associated type, or null if none found
+    /// </summary>
     protected Action GetActionByType(Action.Type type)
     {
         // If an action coroutine is in progress, return true

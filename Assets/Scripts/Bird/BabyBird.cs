@@ -9,12 +9,6 @@ public class BabyBird : Bird
         StartCoroutine(EvolveWhenLoveMax());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator EvolveWhenLoveMax()
     {
         // Wait until love is maxed out

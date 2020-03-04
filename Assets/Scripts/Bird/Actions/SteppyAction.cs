@@ -2,26 +2,26 @@
 using System.Collections;
 
 [RequireComponent(typeof(Animator))]
-public class ChirpAction : Action
+public class SteppyAction : Action
 {
     Animator animator;
     private void Awake()
     {
-        type = Type.CHIRP;
+        type = Type.STEPPY;
 
         if (!TryGetComponent(out animator))
-            Debug.LogError("ChirpAction | missing Animator component");
+            Debug.LogError("SteppyAction | missing Animator component");
     }
 
     protected override IEnumerator ActionCoroutine()
     {
-        Debug.Log("performing Chirp action");
+        Debug.Log("performing Steppy action");
 
-        // Trigger chirp animation
-        animator.SetTrigger("Chirp");
-
+        // Trigger steppy animation
+        animator.SetTrigger("Steppy");
+        
         // Wait a few seconds before marking coroutine as finished
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         state = State.FINISHED;
     }
 }
