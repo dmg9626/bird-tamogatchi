@@ -89,10 +89,16 @@ public abstract class Bird : MonoBehaviour
 
         // Keep fishing until we find an idle action
         Action action = null;
+        int numTries = 0;
         while(action == null || !action.idle)
         {
             int actionIndex = Random.Range(0, actions.Length);
             action = actions[actionIndex];
+            
+            // If we can't find one after 7 tries, just return null
+            numTries++;
+            if (numTries > 7)
+                return null;
         }
         return action;
     }

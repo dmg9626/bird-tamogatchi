@@ -780,11 +780,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV
       objectReference: {fileID: 0}
-    - target: {fileID: 285845800445204210, guid: 73bcb19d467cd244581cf67f7212be1d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8658850971291202292, guid: 73bcb19d467cd244581cf67f7212be1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -923,6 +918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987123950471985530, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4385170361354055726, guid: ac7b2418a81a7974fb9d5a4457cc8380,
         type: 3}

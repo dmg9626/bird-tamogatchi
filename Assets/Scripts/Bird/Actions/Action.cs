@@ -11,13 +11,14 @@ public abstract class Action : MonoBehaviour
         STEPPY = 2,
         ITCH = 3,
         SING = 4,
-        FEED = 5
+        FEED = 5,
+        TV = 6
     }
 
     public Type type { get; protected set; }
 
     public enum State { FINISHED, IN_PROGRESS }
-    
+
     public State state { get; protected set; }
 
     /// <summary>

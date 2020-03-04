@@ -32,6 +32,7 @@ public class FeedAction : AnimationAction
         type = Type.FEED;
         animationTrigger = "Feed";
         duration = 1.75f;
+        idle = false;
 
         base.Awake();
     }
