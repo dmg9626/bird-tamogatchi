@@ -3,6 +3,12 @@ using System.Collections;
 
 public class FeedAction : AnimationAction
 {
+    private Need hunger => BirdStatus.Instance.hunger;
+
+    [SerializeField]
+    private float satisfactionBoost = .4f;
+
+    [Header("Sprite Movement Settings")]
     [SerializeField]
     protected SpriteRenderer foodItem;
 
@@ -25,7 +31,7 @@ public class FeedAction : AnimationAction
     {
         type = Type.FEED;
         animationTrigger = "Feed";
-        duration = 2f;
+        duration = 1.75f;
 
         base.Awake();
     }
@@ -44,9 +50,13 @@ public class FeedAction : AnimationAction
             Vector3 position = Vector3.Lerp(start.position, end.position, t);
             foodItem.transform.position = position;
 
-            // Hide after visible duration elapsed
+            // Halfway through transition
             if (t >= foodVisibleDuration)
+            {
+                // Hide food item and increment hunger level
                 foodItem.enabled = false;
+                hunger.Increase(satisfactionBoost);
+            }
 
             t += Time.deltaTime / duration;
             yield return null;

@@ -5,6 +5,7 @@ public abstract class Action : MonoBehaviour
 {
     public enum Type
     {
+        NONE = -1,
         HOP = 0,
         CHIRP = 1,
         STEPPY = 2,

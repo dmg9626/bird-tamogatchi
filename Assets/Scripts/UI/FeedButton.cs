@@ -1,12 +1,11 @@
-﻿using UnityEngine;
+﻿    using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class NeedButton : MonoBehaviour
+public class FeedButton : MonoBehaviour
 {
-    public Need need;
-
+    private Bird bird;
     private Button button;
 
     // Use this for initialization
@@ -17,13 +16,12 @@ public class NeedButton : MonoBehaviour
 
         button.onClick.AddListener(() =>
         {
-            need.Increase(.2f);
+            if(!bird)
+            {
+                Debug.Log("Lost reference to bird, trying to find it again...");
+                bird = FindObjectOfType<Bird>();
+            }
+            bird.nextAction = Action.Type.FEED;
         });
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

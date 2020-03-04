@@ -17,9 +17,14 @@ public abstract class Bird : MonoBehaviour
     protected BirdStatus birdStatus;
 
     /// <summary>
-    /// Actions that can be performed by this bird
+    /// Actions that can be performed by this bird (both idle and player-triggered)
     /// </summary>
     protected Action[] actions;
+
+    /// <summary>
+    /// Action queued up to perform after current one
+    /// </summary>
+    public Action.Type nextAction { get; set; }
 
     protected Coroutine actionCoroutine;
 
@@ -46,8 +51,20 @@ public abstract class Bird : MonoBehaviour
         if (actions.Length > 0 && !IsPerformingAction())
         {
             Debug.Log("Performing action...");
-            Action action = SelectIdleAction();
-            action.Execute();
+
+            // Perform queued up action if there's one present
+            Action action;
+            if (nextAction != Action.Type.NONE) {
+                action = GetActionByType(nextAction);
+                nextAction = Action.Type.NONE;
+            }
+            // or just select a random idle action
+            else
+                action = SelectIdleAction();
+
+            // Check that we found an action with the specified type before executing
+            if(action)
+                action.Execute();
         }
     }
 
@@ -64,7 +81,6 @@ public abstract class Bird : MonoBehaviour
         Destroy(gameObject);
         return true;
     }
-
     
     private Action SelectIdleAction()
     {

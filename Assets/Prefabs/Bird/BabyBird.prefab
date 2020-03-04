@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: 0
+  satisfactionBoost: 0.4
   foodItem: {fileID: 4875663554172211305}
   foodVisibleDuration: 1.25
   start: {fileID: 713114819540228407}
