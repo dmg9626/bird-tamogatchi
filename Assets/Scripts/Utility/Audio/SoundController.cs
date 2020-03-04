@@ -41,13 +41,6 @@ public class SoundController : Singleton<SoundController>
     protected string databasePath = "SoundDatabase";
 
 
-    [Header("Debug Menu")]
-    /// <summary>
-    /// Used by SoundControllerEditor to play corresponding sound effect when Test Sound Effect button is pressed in Inspector
-    /// </summary>
-    [Tooltip("Press the button below to play this sound effect (only works while the game is running)")]
-    public SoundType soundEffect;
-
     override
     protected void Awake()
     {

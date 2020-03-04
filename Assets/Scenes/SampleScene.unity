@@ -393,7 +393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: 0
-  soundEffect: 0
 --- !u!82 &1184314718
 AudioSource:
   m_ObjectHideFlags: 0
@@ -743,6 +742,31 @@ PrefabInstance:
     - target: {fileID: 1243958823529921019, guid: ac7b2418a81a7974fb9d5a4457cc8380,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904062316885191833, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904062316885191833, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904062316885191833, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904062316885191833, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904062316885191833, guid: ac7b2418a81a7974fb9d5a4457cc8380,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2092459153116821185, guid: ac7b2418a81a7974fb9d5a4457cc8380,

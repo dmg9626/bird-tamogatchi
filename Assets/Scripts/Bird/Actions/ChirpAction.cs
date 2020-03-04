@@ -17,8 +17,9 @@ public class ChirpAction : Action
     {
         Debug.Log("performing Chirp action");
 
-        // Trigger chirp animation
+        // Trigger chirp animation and play sound effect
         animator.SetTrigger("Chirp");
+        SoundController.Instance.PlaySoundEffect(SoundType.CHIRP);
 
         // Wait a few seconds before marking coroutine as finished
         yield return new WaitForSeconds(2.5f);
