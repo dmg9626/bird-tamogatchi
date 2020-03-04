@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5532354659909561391}
   - component: {fileID: 5532354659909561384}
   - component: {fileID: -5604854494012594904}
+  - component: {fileID: 1254604482}
   m_Layer: 0
   m_Name: AdultBird
   m_TagString: Untagged
@@ -115,3 +116,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextPhase: {fileID: 0}
+--- !u!114 &1254604482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532354659909561385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f96b5d2e576544abd51fd6c0c79b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
