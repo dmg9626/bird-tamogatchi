@@ -43,7 +43,7 @@ public abstract class Bird : MonoBehaviour
     void Update()
     {
         // Perform actions at random
-        if (!IsPerformingAction())
+        if (actions.Length > 0 && !IsPerformingAction())
         {
             Debug.Log("Performing action...");
             Action action = SelectRandomAction();
