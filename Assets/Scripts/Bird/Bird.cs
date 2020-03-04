@@ -46,7 +46,7 @@ public abstract class Bird : MonoBehaviour
         if (actions.Length > 0 && !IsPerformingAction())
         {
             Debug.Log("Performing action...");
-            Action action = SelectRandomAction();
+            Action action = SelectIdleAction();
             action.Execute();
         }
     }
@@ -66,13 +66,19 @@ public abstract class Bird : MonoBehaviour
     }
 
     
-    private Action SelectRandomAction()
+    private Action SelectIdleAction()
     {
         if (actions.Length == 0)
             return null;
 
-        int actionIndex = Random.Range(0, actions.Length);
-        return actions[actionIndex];
+        // Keep fishing until we find an idle action
+        Action action = null;
+        while(action == null || !action.idle)
+        {
+            int actionIndex = Random.Range(0, actions.Length);
+            action = actions[actionIndex];
+        }
+        return action;
     }
 
     /// <summary>

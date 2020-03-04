@@ -3,13 +3,10 @@ using System.Collections;
 
 public class AnimationAction : Action
 {
-    [SerializeField]
     protected string animationTrigger;
 
-    [SerializeField]
     protected SoundType soundType = SoundType.NONE;
 
-    [SerializeField]
     protected float duration;
 
     Animator animator;
@@ -23,13 +20,17 @@ public class AnimationAction : Action
     protected override IEnumerator ActionCoroutine()
     {
         Debug.LogFormat("performing {0} action", type);
-
-        // Trigger animation and play sound effect
-        animator.SetTrigger(animationTrigger);
+        Animate();
         SoundController.Instance.PlaySoundEffect(soundType);
 
         // Wait a few seconds before marking coroutine as finished
         yield return new WaitForSeconds(duration);
         state = State.FINISHED;
+    }
+
+    protected virtual void Animate()
+    {
+        // Trigger animation and play sound effect
+        animator.SetTrigger(animationTrigger);
     }
 }
