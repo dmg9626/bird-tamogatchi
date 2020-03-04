@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43a4499033ed945cc969e4942dc5c959, type: 3}
-  m_Name: Chirp
+  m_Name: Chirp_1
   m_EditorClassIdentifier: 
   type: 1
-  clip: {fileID: 8300000, guid: 91bfe97957eb53440af3c66ddb180f83, type: 3}
+  clip: {fileID: 8300000, guid: fe451c858c2a32c4d877b2e19c5b81b7, type: 3}
   volume: 1
   loop: 0
