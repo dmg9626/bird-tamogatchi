@@ -1,25 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SingAction : Action
+public class SingAction : AnimationAction
 {
-    Animator animator;
-    private void Awake()
+    protected override void Awake()
     {
         type = Type.SING;
+        soundType = SoundType.CHIRP;
+        animationTrigger = "Sing";
+        duration = 2.5f;
 
-        if (!TryGetComponent(out animator))
-            Debug.LogError("SingAction | missing Animator component");
-    }
-
-    protected override IEnumerator ActionCoroutine()
-    {
-        // Trigger animation and play sound effect
-        animator.SetTrigger("Sing");
-        SoundController.Instance.PlaySoundEffect(SoundType.CHIRP);
-
-        // Wait a few seconds before marking coroutine as finished
-        yield return new WaitForSeconds(2f);
-        state = State.FINISHED;
+        base.Awake();
     }
 }
