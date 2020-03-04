@@ -16,6 +16,7 @@ public class WatchTVAction : AnimationAction
         animationTrigger = "TV";
         duration = 2f;
         idle = false;
+        soundType = SoundType.CHIRP;
 
         base.Awake();
 
